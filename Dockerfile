@@ -4,12 +4,12 @@ FROM python:3.7.3-stretch
 WORKDIR /app
 
 # Copy source code to working directory
-COPY . containerization_devops/web.py /app/
-COPY . nlib /app/
+COPY . web.py /app/
+COPY . /nlib /app/
 # Install packages from requirements.txt
 # hadolint ignore=DL3013
 RUN pip install --upgrade pip &&\
-    pip install --trusted-host pypi.python.org -r requirements.txt
+    pip install --trusted-host pypi.python.org -r requirement.txt
 
 # Expose port 80
 EXPOSE 80
