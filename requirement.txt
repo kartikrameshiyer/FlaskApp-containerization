@@ -1,5 +1,3 @@
-pandas
-sensible
 click
 pytest
 pylint
